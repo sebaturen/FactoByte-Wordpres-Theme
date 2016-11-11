@@ -232,6 +232,16 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Custom shortcode
+ */
+require get_template_directory() . '/inc/shortcode.php';
+
+/**
+ * Costum post name, change to 'Productos', disable tags, etc
+ */
+require get_template_directory() . '/inc/constum-post.php';
+
+/**
  * Load custom nav walker
  */
 require get_template_directory() . '/inc/navwalker.php';
@@ -249,11 +259,6 @@ if ( class_exists( 'jigoshop' ) ) {
  */
 require get_template_directory() . '/inc/jigoshop-setup.php';
 }
-
-/**
- * Metabox file load
- */
-require get_template_directory() . '/inc/metaboxes.php';
 
 /**
  * Register Social Icon menu

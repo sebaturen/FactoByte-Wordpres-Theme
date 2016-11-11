@@ -1097,3 +1097,19 @@ p.logged-in-as {
 .full-width #primary{
     width: 100%;
 }
+/*Header*/
+.center-text {
+    text-align: center;
+}
+/*Separador ShortCode*/
+.bord-separador {
+    border-bottom: 1px solid #eee;
+    margin: 10px 0 10px;
+}
+/*Form contact diseign*/
+label {
+    width: 100%;
+}
+input.wpcf7-form-control {
+    width: 100%;
+}

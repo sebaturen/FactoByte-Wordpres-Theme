@@ -71,7 +71,8 @@
                         $layout_class = get_post_meta($post->ID, 'site_layout', true);
                 }
                 else{
-                        $layout_class = of_get_option( 'site_layout' );
+                        //$layout_class = of_get_option( 'site_layout' );
+						$layout_class = "full-width";
                 }
                 if( is_home() && is_sticky( $post->ID ) ){
                         $layout_class = of_get_option( 'site_layout' );
