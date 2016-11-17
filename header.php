@@ -54,9 +54,10 @@
 				<?php endif; // header image was removed (again) ?>
 
 			</div>
-				<?php dazzling_header_menu(); ?>
 		</div>
 	</nav><!-- .site-navigation -->
+
+		<?php dazzling_header_menu(); ?>
 
         <div class="top-section">
 		<?php dazzling_featured_slider(); ?>

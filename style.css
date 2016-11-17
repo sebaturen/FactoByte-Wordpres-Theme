@@ -695,13 +695,25 @@ li.recentcomments {
 .navbar-default .navbar-toggle:focus {
   background-color: transparent;
 }
+.fbytemenu {
+    text-align: center;
+}
 .nav.navbar-nav {
-  float: right;
+  float: none;
+  display: inline-block;
 }
 @media (max-width: 767px) {
   .nav.navbar-nav {
     float: none;
   }
+}
+.navbar-header {
+    float: none !important;
+    text-align: center;
+}
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+    margin: 0;
 }
 /* =Comments
 ----------------------------------------------- */
@@ -1112,4 +1124,15 @@ label {
 }
 input.wpcf7-form-control {
     width: 100%;
+}
+/*Slider page*/
+.rslides_container ul {
+    margin: 0 auto;
+}
+.rslides_container {
+    margin-bottom: 0;
+}
+/*Last product*/
+.lasProductList {
+    display: table;
 }

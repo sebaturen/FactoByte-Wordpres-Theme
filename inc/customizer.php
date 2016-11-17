@@ -58,34 +58,6 @@ function dazzling_customizer( $wp_customize ) {
                     'type'      => 'checkbox',
             ) );
 
-            // Pull all the categories into an array
-            global $options_categories;
-            $wp_customize->add_setting('dazzling[dazzling_slide_categories]', array(
-                'default' => '',
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
-                'sanitize_callback' => 'dazzling_sanitize_slidecat'
-            ));
-            $wp_customize->add_control('dazzling[dazzling_slide_categories]', array(
-                'label' => __('Slider Category', 'dazzling'),
-                'section' => 'dazzling_slider_options',
-                'type'    => 'select',
-                'description' => __('Select a category for the featured post slider', 'dazzling'),
-                'choices'    => $options_categories
-            ));
-
-            $wp_customize->add_setting('dazzling[dazzling_slide_number]', array(
-                'default' => 3,
-                'type' => 'option',
-                'sanitize_callback' => 'dazzling_sanitize_number'
-            ));
-            $wp_customize->add_control('dazzling[dazzling_slide_number]', array(
-                'label' => __('Number of slide items', 'dazzling'),
-                'section' => 'dazzling_slider_options',
-                'description' => __('Enter the number of slide items', 'dazzling'),
-                'type' => 'text'
-            ));
-
         $wp_customize->add_section('dazzling_layout_options', array(
             'title' => __('Layout options', 'dazzling'),
             'priority' => 31,
@@ -341,6 +313,28 @@ function dazzling_customizer( $wp_customize ) {
             $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'dazzling[top_nav_dropdown_item]', array(
                 'label' => __('Top nav dropdown item color', 'dazzling'),
                 'description'   => __('Dropdown item color','dazzling'),
+                'section' => 'dazzling_header_options',
+            )));
+
+            $wp_customize->add_setting('dazzling[top_nav_background_menu_item]', array(
+                'default' => '',
+                'type'  => 'option',
+                'sanitize_callback' => 'dazzling_sanitize_hexcolor'
+            ));
+            $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'dazzling[top_nav_background_menu_item]', array(
+                'label' => 'Fondo del Menu',
+                'description'   => 'Color de fondo del menu, por defecto, blanco',
+                'section' => 'dazzling_header_options',
+            )));
+
+            $wp_customize->add_setting('dazzling[top_nav_color_font_item]', array(
+                'default' => '',
+                'type'  => 'option',
+                'sanitize_callback' => 'dazzling_sanitize_hexcolor'
+            ));
+            $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'dazzling[top_nav_color_font_item]', array(
+                'label' => 'Color Texto Menu',
+                'description'   => 'Color de texto del Menu',
                 'section' => 'dazzling_header_options',
             )));
 
